@@ -2,16 +2,16 @@
     {
         title: '首页',
         key: '/home',
-        icon: 'PieChartOutlined',
+        icon: 'HomeOutlined',
     }, {
         title: '商品',
         key: '/products',
-        icon: 'MailOutlined',
+        icon: 'AppstoreOutlined',
         children: [
             {
                 title: '品类管理',
                 key: '/category',
-                icon: 'PieChartOutlined',
+                icon: 'UnorderedListOutlined',
             },{
                 title: '商品管理',
                 key: '/product',
@@ -25,7 +25,26 @@
     },{
         title: '角色管理',
         key: '/role',
-        icon: 'UserOutlined',
+        icon: 'ClusterOutlined',
+    },{
+        title: '图形图标',
+        key: '/charts',
+        icon: 'AreaChartOutlined',
+        children: [
+            {
+                title: '柱状图',
+                key: '/bar',
+                icon: 'BarChartOutlined',
+            },{
+                title: '折线图',
+                key: '/line',
+                icon: 'LineChartOutlined',
+            },{
+                title: '饼图',
+                key: '/pie',
+                icon: 'PieChartOutlined',
+            }
+        ]
     }
 ]
 

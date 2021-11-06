@@ -26,12 +26,6 @@ const LeftNav1 = () => {
                     <Menu.Item key={item.key} icon={icon(item.icon)}><Link to={item.key}>{item.title}</Link></Menu.Item>
                 ))
             } else {
-                // 查找一个与当前请求路径匹配的子Item
-                const cItem = item.children.find(cItem => cItem.key === pathname)
-                // 如果存在，说明当前item的子列表需要打开
-                if(cItem && cItem.key) {
-                    setOpenKey(item.key)
-                }
                 pre.push((<SubMenu key={item.key} icon={icon(item.icon)} title={item.title}>
                     {getMenuNodes(item.children)}
                 </SubMenu>))
