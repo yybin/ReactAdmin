@@ -26,6 +26,11 @@ const LeftNav1 = () => {
                     <Menu.Item key={item.key} icon={icon(item.icon)}><Link to={item.key}>{item.title}</Link></Menu.Item>
                 ))
             } else {
+                const cItem = item.children.find(cItem => cItem.key === pathname)
+                if(cItem) {
+                    // console.log(111)
+                    setOpenKey(item.key)
+                }
                 pre.push((<SubMenu key={item.key} icon={icon(item.icon)} title={item.title}>
                     {getMenuNodes(item.children)}
                 </SubMenu>))
@@ -33,7 +38,7 @@ const LeftNav1 = () => {
             return pre
         },[])
     }
-
+    console.log(openKey)
     useEffect(() => {
         setMenuNodes(getMenuNodes(menuList))
     }, [])

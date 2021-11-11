@@ -21,7 +21,7 @@ const Admin = () => {
             </Sider>
             <Layout>
                 <Header>Header</Header>
-                <Content style={{backgroundColor: '#fff'}}>
+                <Content style={{ margin: '20px 20px', backgroundColor: '#fff'}}>
                     <Outlet />
                 </Content>
                 <Footer style={{textAlign:'center', color:'#ccc'}}>推荐使用谷歌浏览器,可以获得更加页面操作体验</Footer>
